@@ -14,6 +14,6 @@ public class snake : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		rigidbody.velocity = transform.forward;
+		GetComponent<Rigidbody>().velocity = transform.forward;
 	}
 }
