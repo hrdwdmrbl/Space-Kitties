@@ -13,10 +13,5 @@ function Update () {
     transform.position = v3FromLeader + followWhat.transform.position;
 
     transform.LookAt(followWhat.transform);
-    //followWhat.transform.position.z=followWhat.transform.position.z+.2;
-    //transform.position = transform.forward * 2;
-
     transform.Rotate(90,0,0);
-   
-
 }
