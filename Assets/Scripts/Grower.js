@@ -28,7 +28,11 @@ function addSegment () {
 //
 //		var numChildren = myTail.transform.childCount;
 		var segmentToDelete = lastTailSegment;
-		lastTailSegment = segmentToDelete.GetComponent.<TailFollower>().followWhat;
+		var followWhat = segmentToDelete.GetComponent.<TailFollower>().followWhat;
+		if (!followWhat) {
+			return;
+		}
+		lastTailSegment = followWhat;
 		Destroy(segmentToDelete); 
 //		Destroy(myTail.transform.GetChild(numChildren - 1).gameObject); 
 		
